@@ -792,6 +792,7 @@
             .mobile-toggle { display: flex; }
         }
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -819,6 +820,15 @@
 
         <div class="sidebar-footer">
             <p>非官方粉丝站<br>仅供分享与记录</p>
+            <div class="language-dropdown">
+                <button id="language-btn">🌐 中文 ▼</button>
+
+                <div id="language-menu" class="language-menu">
+                    <button onclick="setLanguage('zh')">中文</button>
+                    <button onclick="setLanguage('en')">English</button>
+                    <button onclick="setLanguage('jp')">日本語</button>
+                </div>
+            </div>
         </div>
     </aside>
 
@@ -1265,5 +1275,6 @@
             });
         });
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
