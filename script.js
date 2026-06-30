@@ -13,7 +13,7 @@ function setLanguage(lang) {
     document.getElementById("language-btn").innerHTML =
         "🌐 " +
         (lang === "zh" ? "中文" :
-         lang === "en" ? "English" : "日本語")
+         lang === "en" ? "English" : "한국어" : "日本語")
         + " ▼";
 
     menu.style.display = "none";
