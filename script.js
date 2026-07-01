@@ -1,22 +1,28 @@
-// My Website JavaScript
+// 打开/关闭语言菜单
 const btn = document.getElementById("language-btn");
 const menu = document.getElementById("language-menu");
 
 if (btn && menu) {
-    btn.onclick = () => {
+    btn.addEventListener("click", () => {
         menu.style.display =
             menu.style.display === "block" ? "none" : "block";
-    };
+    });
 }
 
+// 切换语言（目前先测试）
 function setLanguage(lang) {
-    document.getElementById("language-btn").innerHTML =
-        "🌐 " +
-        (lang === "zh" ? "中文" :
-         lang === "en" ? "English" : "한국어" : "日本語")
-        + " ▼";
+
+    const names = {
+        zh: "中文",
+        en: "English",
+        ko: "한국어",
+        ja: "日本語"
+    };
+
+    btn.innerHTML = `🌐 ${names[lang]} ▼`;
 
     menu.style.display = "none";
 
-    alert("下一步我们再让页面真正切换到：" + lang);
+    console.log("当前语言：", lang);
+
 }
